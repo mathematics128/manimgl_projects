@@ -1003,14 +1003,14 @@ class Cover(Scene):
         group.apply_function(self.transform)
         self.add(group)
 
-        title_1 = Text('射', font='霞鹜文楷 GB 屏幕阅读版', font_size=216)
-        title_2 = Text('影', font='霞鹜文楷 GB 屏幕阅读版', font_size=216)
-        title_3 = Text('变', font='霞鹜文楷 GB 屏幕阅读版', font_size=216)
-        title_4 = Text('换', font='霞鹜文楷 GB 屏幕阅读版', font_size=216)
-        title = VGroup(title_1, title_2, title_3, title_4)
-        title.arrange(buff=MED_LARGE_BUFF)
-        title.set_backstroke(width=20)
-        self.add(title)
+        # title_1 = Text('射', font='霞鹜文楷 GB 屏幕阅读版', font_size=216)
+        # title_2 = Text('影', font='霞鹜文楷 GB 屏幕阅读版', font_size=216)
+        # title_3 = Text('变', font='霞鹜文楷 GB 屏幕阅读版', font_size=216)
+        # title_4 = Text('换', font='霞鹜文楷 GB 屏幕阅读版', font_size=216)
+        # title = VGroup(title_1, title_2, title_3, title_4)
+        # title.arrange(buff=MED_LARGE_BUFF)
+        # title.set_backstroke(width=20)
+        # self.add(title)
 
 
 class Acknowledgement(Scene):
