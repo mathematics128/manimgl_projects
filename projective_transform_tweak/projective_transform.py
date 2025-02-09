@@ -291,7 +291,7 @@ class ProjectiveTransform(Scene):
 
         # 定义受害平面（划）变换平面
         grid = NumberPlane((-16, 16), (-8, 8))
-        grid.add_coordinate_labels()
+        # grid.add_coordinate_labels()
         grid.prepare_for_nonlinear_transform()
         grid_original = grid.copy()
         grid.save_state()
@@ -321,14 +321,15 @@ class ProjectiveTransform(Scene):
             **kwargs
         ).to_edge(UP).set_backstroke(width=5)
         # 修改之后的问题变成了色块……
-        trans_word_8 = Text(
-            '''（假装你没看到这些乱飞的白色块）''',
-            **kwargs
-        ).to_edge(UP).set_backstroke(width=5)
-        trans_word_9 = Text(
-            '''（这些色块我也不知道怎么搞的qwq）''',
-            **kwargs
-        ).to_edge(UP).set_backstroke(width=5)
+        # 去掉 coordinate_labels 就好了
+        # trans_word_8 = Text(
+        #     '''（假装你没看到这些乱飞的白色块）''',
+        #     **kwargs
+        # ).to_edge(UP).set_backstroke(width=5)
+        # trans_word_9 = Text(
+        #     '''（这些色块我也不知道怎么搞的qwq）''',
+        #     **kwargs
+        # ).to_edge(UP).set_backstroke(width=5)
         trans_word_10 = Text(
             '''实际上，计算机正是利用射影变换计算空间场景的''',
             **kwargs
@@ -354,11 +355,11 @@ class ProjectiveTransform(Scene):
         self.wait(1)
         self.play(FadeTransform(trans_word_6, trans_word_7))
         self.wait(2)
-        self.play(FadeTransform(trans_word_7, trans_word_8))
-        self.wait()
-        self.play(FadeTransform(trans_word_8, trans_word_9))
-        self.wait()
-        self.play(FadeTransform(trans_word_9, trans_word_10))
+        # self.play(FadeTransform(trans_word_7, trans_word_8))
+        # self.wait()
+        # self.play(FadeTransform(trans_word_8, trans_word_9))
+        # self.wait()
+        self.play(FadeTransform(trans_word_7, trans_word_10))
         self.wait(2)
         self.play(FadeTransform(trans_word_10, trans_word_11))
         self.play(FadeOut(grid), run_time=0.5)
@@ -671,7 +672,7 @@ class ProjectiveTransform(Scene):
             的真正含义吧！
             ''',
             **kwargs
-        ).add_background_rectangle(BLACK, 0.5)
+        ).add_background_rectangle(BLACK, 0.75)
         trans_word_32 = Text(
             '''另外，学过透视的同学们觉不觉得有点熟悉？''',
             **kwargs
